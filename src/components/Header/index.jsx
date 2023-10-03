@@ -10,7 +10,7 @@ const styles = {
         display: "flex", 
         flexDirection: "row", 
         justifyContent: "space-around", 
-        alignItems: "center"
+        alignItems: "center",
     },
     link: {
         fontSize: "22px",
@@ -27,7 +27,7 @@ const styles = {
 
 const Header = () => {
     return (
-        <AppBar sx={styles.header}>
+        <AppBar sx={styles.header} position="sticky">
             <img src="/images/logo.png" alt="Logo da K-Pop 4 U" />
             <Link color="secondary" sx={styles.link} underline="hover">Início</Link>
             <Link color="secondary" sx={styles.link} underline="hover">Categorias</Link>

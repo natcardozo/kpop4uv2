@@ -1,5 +1,6 @@
 import { ThemeProvider, createTheme } from "@mui/material";
 import Header from "./components/Header"
+import Main from "./components/Main";
 
 const theme = createTheme({
   palette: {
@@ -27,7 +28,8 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Header />
+        <Header />
+        <Main />
     </ThemeProvider>
   )
 }
