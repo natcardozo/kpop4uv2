@@ -1,4 +1,5 @@
 import { Paper, Typography } from "@mui/material";
+import { formatPrice, formatTitle } from "./helpers/format";
 
 const styles = {
     card: {
@@ -21,13 +22,13 @@ const styles = {
     }
 }
 
-const Card = () => {
+const Card = ({ name, artist, image, price }) => {
     return (
         <Paper elevation={6} sx={styles.card}>
-            <img src="/images/imgcard.png" alt="Between 1&2" style={styles.image} />
-            <Typography sx={styles.title} variant="h6">Between 1&2</Typography>
-            <Typography variant="subtitle1">Twice</Typography>
-            <Typography sx={styles.price} variant="h6" color="pink.main">R$ 40,00</Typography>
+            <img src={image} alt={`${name} - ${artist}`} style={styles.image} />
+            <Typography sx={styles.title} variant="h6">{formatTitle(name)}</Typography>
+            <Typography variant="subtitle1">{artist}</Typography>
+            <Typography sx={styles.price} variant="h6" color="pink.main">R$ {formatPrice(price)}</Typography>
         </Paper>
     )
 }
